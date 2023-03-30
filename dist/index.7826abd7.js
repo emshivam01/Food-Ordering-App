@@ -2930,563 +2930,61 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-var _logoPng = require("./assets/logo.png");
-var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
-const Navbar = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Navbar",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "logo",
-                src: (0, _logoPngDefault.default)
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                className: "SearchBar",
-                type: "text",
-                placeholder: "Search for restaurants, cuisines or a dish..."
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "Nav-items",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        children: "Log in"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        children: "Sign up"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        children: "Cart"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "App.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "App.js",
-        lineNumber: 7,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Navbar;
-const restaurantList = [
-    {
-        data: {
-            type: "F",
-            id: "193020",
-            name: "Dhola Maroo Juice Centre",
-            uuid: "323eb110-0dd3-4834-aeb6-95f2baba627c",
-            city: "10161",
-            area: "Mahndi Bagh",
-            totalRatingsString: "100+ ratings",
-            cloudinaryImageId: "b7znmezezmcc3xeh6ezq",
-            cuisines: [
-                "Beverages"
-            ],
-            tags: [],
-            costForTwo: 10000,
-            costForTwoString: "₹100 FOR TWO",
-            deliveryTime: 21,
-            minDeliveryTime: 21,
-            maxDeliveryTime: 21,
-            slaString: "21 MINS",
-            lastMileTravel: 1.600000023841858,
-            slugs: {
-                restaurant: "dhola-maroo-juice-centre-tonk-central-tonk",
-                city: "tonk_per_closed_8june22"
-            },
-            cityState: "10161",
-            address: "Subhash Bazar, Opp SMB Hotel & Restauranat",
-            locality: "TONK",
-            parentId: 72290,
-            unserviceable: true,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 1900,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 1900,
-                message: "",
-                title: "Delivery Charge",
-                amount: "1900",
-                icon: ""
-            },
-            availability: {
-                opened: false,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.6 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "193020",
-                deliveryTime: 21,
-                minDeliveryTime: 21,
-                maxDeliveryTime: 21,
-                lastMileTravel: 1.600000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE_WITH_BANNER",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "2.9",
-            totalRatings: 100,
-            new: false
-        }
-    },
-    {
-        data: {
-            type: "F",
-            id: "553739",
-            name: "Annapurna cafe",
-            uuid: "cc1a4bab-7757-4be5-b2ab-87a6ae979c5e",
-            city: "10161",
-            area: "Central Tonk",
-            totalRatingsString: "Too Few Ratings",
-            cloudinaryImageId: "rnieeze637tuipxmy7xt",
-            cuisines: [
-                "Italian",
-                "Beverages",
-                "Fast Food"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 22,
-            minDeliveryTime: 22,
-            maxDeliveryTime: 22,
-            slaString: "22 MINS",
-            lastMileTravel: 2.299999952316284,
-            slugs: {
-                restaurant: "annapurna-by-b&b-cafe-central-tonk-central-tonk",
-                city: "tonk_per_closed_8june22"
-            },
-            cityState: "10161",
-            address: "Plot no. 8-9, Agrasen Nagar,Sawai Madhopur road ward 23, Tonk Rajasthan304001",
-            locality: "Central Tonk",
-            parentId: 34021,
-            unserviceable: true,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "distance",
-                        fee: 1900,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 1900,
-                message: "",
-                title: "Delivery Charge",
-                amount: "1900",
-                icon: ""
-            },
-            availability: {
-                opened: false,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "2.2 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "553739",
-                deliveryTime: 22,
-                minDeliveryTime: 22,
-                maxDeliveryTime: 22,
-                lastMileTravel: 2.299999952316284,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE_WITH_BANNER",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "--",
-            totalRatings: 0,
-            new: false
-        }
-    },
-    {
-        data: {
-            type: "F",
-            id: "214307",
-            name: "Pizza Bar fast food",
-            uuid: "9fc3f8db-76c4-49ae-aa89-802b40ba7643",
-            city: "10161",
-            area: "Kali Paltan",
-            totalRatingsString: "500+ ratings",
-            cloudinaryImageId: "sagskbcm1be0zuhotxts",
-            cuisines: [
-                "Beverages",
-                "Chinese",
-                "Pizzas"
-            ],
-            tags: [],
-            costForTwo: 20000,
-            costForTwoString: "₹200 FOR TWO",
-            deliveryTime: 21,
-            minDeliveryTime: 21,
-            maxDeliveryTime: 21,
-            slaString: "21 MINS",
-            lastMileTravel: 1.5,
-            slugs: {
-                restaurant: "pizza-bar-central-tonk-central-tonk",
-                city: "tonk_per_closed_8june22"
-            },
-            cityState: "10161",
-            address: "Zila Udhyog Kendra Ke Samne, Tonk",
-            locality: "Central Tonk",
-            parentId: 158340,
-            unserviceable: true,
-            veg: true,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 1900,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 1900,
-                message: "",
-                title: "Delivery Charge",
-                amount: "1900",
-                icon: ""
-            },
-            availability: {
-                opened: false,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.5 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "214307",
-                deliveryTime: 21,
-                minDeliveryTime: 21,
-                maxDeliveryTime: 21,
-                lastMileTravel: 1.5,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE_WITH_BANNER",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "3.6",
-            totalRatings: 500,
-            new: false
-        }
-    },
-    {
-        data: {
-            type: "F",
-            id: "411029",
-            name: "QMF",
-            uuid: "108558b3-d2a4-473c-8b50-3087092f539a",
-            city: "10161",
-            area: "Central Tonk",
-            totalRatingsString: "Too Few Ratings",
-            cloudinaryImageId: "raxujihuz5ps2t6zuxdd",
-            cuisines: [
-                "Fast Food",
-                "Pizzas",
-                "Bakery"
-            ],
-            tags: [],
-            costForTwo: 30000,
-            costForTwoString: "₹300 FOR TWO",
-            deliveryTime: 21,
-            minDeliveryTime: 21,
-            maxDeliveryTime: 21,
-            slaString: "21 MINS",
-            lastMileTravel: 1.600000023841858,
-            slugs: {
-                restaurant: "qmf-central-tonk-central-tonk",
-                city: "tonk_per_closed_8june22"
-            },
-            cityState: "10161",
-            address: "QMF, Raj talkies road ward 17, Tonk Ward 17, Tonk, Rajasthan",
-            locality: "Central Tonk",
-            parentId: 253129,
-            unserviceable: true,
-            veg: false,
-            select: false,
-            favorite: false,
-            tradeCampaignHeaders: [],
-            chain: [],
-            feeDetails: {
-                fees: [
-                    {
-                        name: "distance",
-                        fee: 1900,
-                        message: ""
-                    },
-                    {
-                        name: "time",
-                        fee: 0,
-                        message: ""
-                    },
-                    {
-                        name: "special",
-                        fee: 0,
-                        message: ""
-                    }
-                ],
-                totalFees: 1900,
-                message: "",
-                title: "Delivery Charge",
-                amount: "1900",
-                icon: ""
-            },
-            availability: {
-                opened: false,
-                nextOpenMessage: "",
-                nextCloseMessage: ""
-            },
-            longDistanceEnabled: 0,
-            rainMode: "NONE",
-            thirdPartyAddress: false,
-            thirdPartyVendor: "",
-            adTrackingID: "",
-            badges: {
-                imageBased: [],
-                textBased: [],
-                textExtendedBadges: []
-            },
-            lastMileTravelString: "1.6 kms",
-            hasSurge: false,
-            sla: {
-                restaurantId: "411029",
-                deliveryTime: 21,
-                minDeliveryTime: 21,
-                maxDeliveryTime: 21,
-                lastMileTravel: 1.600000023841858,
-                lastMileDistance: 0,
-                serviceability: "SERVICEABLE_WITH_BANNER",
-                rainMode: "NONE",
-                longDistance: "NOT_LONG_DISTANCE",
-                preferentialService: false,
-                iconType: "EMPTY"
-            },
-            promoted: false,
-            avgRating: "--",
-            totalRatings: 0,
-            new: false
-        }
-    }
-];
-const RestaurantCard = ({ name , cloudinaryImageId , cuisines , deliveryTime , costForTwoString  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 408,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: name
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 414,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "Details",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: cuisines.join(", ")
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 416,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: deliveryTime + " mins"
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 417,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: costForTwoString
-                    }, void 0, false, {
-                        fileName: "App.js",
-                        lineNumber: 418,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "App.js",
-                lineNumber: 415,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                children: "Order Now"
-            }, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 420,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "App.js",
-        lineNumber: 407,
-        columnNumber: 5
-    }, undefined);
-};
-_c1 = RestaurantCard;
+var _navbar = require("./Components/Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+var _restaurantCards = require("./Components/RestaurantCards");
+var _restaurantCardsDefault = parcelHelpers.interopDefault(_restaurantCards);
+var _searchBar = require("./Components/SearchBar");
+var _searchBarDefault = parcelHelpers.interopDefault(_searchBar);
+var _config = require("./config");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Navbar, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 428,
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchBarDefault.default), {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "Cards",
-                children: restaurantList.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                children: (0, _config.restaurantList).map((restaurant)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardsDefault.default), {
                         ...restaurant.data
                     }, void 0, false, {
                         fileName: "App.js",
-                        lineNumber: 431,
+                        lineNumber: 15,
                         columnNumber: 18
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 429,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_c2 = AppLayout;
+_c = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 440,
+    lineNumber: 24,
     columnNumber: 13
 }, undefined));
-var _c, _c1, _c2;
-$RefreshReg$(_c, "Navbar");
-$RefreshReg$(_c1, "RestaurantCard");
-$RefreshReg$(_c2, "AppLayout");
+var _c;
+$RefreshReg$(_c, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./assets/logo.png":"kRPTR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./Components/Navbar":"il8Zu","./Components/RestaurantCards":"dSc9Z","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Components/SearchBar":"2h6sC","./config":"bSr8D"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("351cad3fe47502db");
 
@@ -27671,7 +27169,78 @@ module.exports = require("152c565d21628fab");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"kRPTR":[function(require,module,exports) {
+},{}],"il8Zu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8329 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8329.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _logoPng = require("../assets/logo.png");
+var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+const Navbar = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Navbar",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "logo",
+                src: (0, _logoPngDefault.default)
+            }, void 0, false, {
+                fileName: "Components/Navbar.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "Nav-items",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: "Log in"
+                    }, void 0, false, {
+                        fileName: "Components/Navbar.js",
+                        lineNumber: 8,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: "Sign up"
+                    }, void 0, false, {
+                        fileName: "Components/Navbar.js",
+                        lineNumber: 9,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: "Cart"
+                    }, void 0, false, {
+                        fileName: "Components/Navbar.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Components/Navbar.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "Components/Navbar.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Navbar;
+exports.default = Navbar;
+var _c;
+$RefreshReg$(_c, "Navbar");
+
+  $parcel$ReactRefreshHelpers$8329.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../assets/logo.png":"kRPTR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kRPTR":[function(require,module,exports) {
 module.exports = require("c322353aba976727").getBundleURL("lly8x") + "logo.f0c67fd0.png" + "?" + Date.now();
 
 },{"c322353aba976727":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27871,6 +27440,515 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"8f8f05f7a5cd39ba":"786KC"}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequire26a4")
+},{"8f8f05f7a5cd39ba":"786KC"}],"dSc9Z":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ab08 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ab08.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _config = require("../config");
+const RestaurantCard = ({ name , cloudinaryImageId , cuisines , deliveryTime , costForTwoString  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _config.IMG_URL) + cloudinaryImageId
+            }, void 0, false, {
+                fileName: "Components/RestaurantCards.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "Components/RestaurantCards.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "Details",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: cuisines.join(", ")
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCards.js",
+                        lineNumber: 15,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: deliveryTime + " mins"
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCards.js",
+                        lineNumber: 16,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: costForTwoString
+                    }, void 0, false, {
+                        fileName: "Components/RestaurantCards.js",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Components/RestaurantCards.js",
+                lineNumber: 14,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                children: "Order Now"
+            }, void 0, false, {
+                fileName: "Components/RestaurantCards.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "Components/RestaurantCards.js",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ab08.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../config":"bSr8D"}],"bSr8D":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
+parcelHelpers.export(exports, "IMG_URL", ()=>IMG_URL);
+const restaurantList = [
+    {
+        data: {
+            type: "F",
+            id: "193020",
+            name: "Dhola Maroo Juice Centre",
+            uuid: "323eb110-0dd3-4834-aeb6-95f2baba627c",
+            city: "10161",
+            area: "Mahndi Bagh",
+            totalRatingsString: "100+ ratings",
+            cloudinaryImageId: "b7znmezezmcc3xeh6ezq",
+            cuisines: [
+                "Beverages"
+            ],
+            tags: [],
+            costForTwo: 10000,
+            costForTwoString: "₹100 FOR TWO",
+            deliveryTime: 21,
+            minDeliveryTime: 21,
+            maxDeliveryTime: 21,
+            slaString: "21 MINS",
+            lastMileTravel: 1.600000023841858,
+            slugs: {
+                restaurant: "dhola-maroo-juice-centre-tonk-central-tonk",
+                city: "tonk_per_closed_8june22"
+            },
+            cityState: "10161",
+            address: "Subhash Bazar, Opp SMB Hotel & Restauranat",
+            locality: "TONK",
+            parentId: 72290,
+            unserviceable: true,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 1900,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 1900,
+                message: "",
+                title: "Delivery Charge",
+                amount: "1900",
+                icon: ""
+            },
+            availability: {
+                opened: false,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "193020",
+                deliveryTime: 21,
+                minDeliveryTime: 21,
+                maxDeliveryTime: 21,
+                lastMileTravel: 1.600000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE_WITH_BANNER",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "2.9",
+            totalRatings: 100,
+            new: false
+        }
+    },
+    {
+        data: {
+            type: "F",
+            id: "553739",
+            name: "Annapurna cafe",
+            uuid: "cc1a4bab-7757-4be5-b2ab-87a6ae979c5e",
+            city: "10161",
+            area: "Central Tonk",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "rnieeze637tuipxmy7xt",
+            cuisines: [
+                "Italian",
+                "Beverages",
+                "Fast Food"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 22,
+            minDeliveryTime: 22,
+            maxDeliveryTime: 22,
+            slaString: "22 MINS",
+            lastMileTravel: 2.299999952316284,
+            slugs: {
+                restaurant: "annapurna-by-b&b-cafe-central-tonk-central-tonk",
+                city: "tonk_per_closed_8june22"
+            },
+            cityState: "10161",
+            address: "Plot no. 8-9, Agrasen Nagar,Sawai Madhopur road ward 23, Tonk Rajasthan304001",
+            locality: "Central Tonk",
+            parentId: 34021,
+            unserviceable: true,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "distance",
+                        fee: 1900,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 1900,
+                message: "",
+                title: "Delivery Charge",
+                amount: "1900",
+                icon: ""
+            },
+            availability: {
+                opened: false,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "2.2 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "553739",
+                deliveryTime: 22,
+                minDeliveryTime: 22,
+                maxDeliveryTime: 22,
+                lastMileTravel: 2.299999952316284,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE_WITH_BANNER",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        }
+    },
+    {
+        data: {
+            type: "F",
+            id: "214307",
+            name: "Pizza Bar fast food",
+            uuid: "9fc3f8db-76c4-49ae-aa89-802b40ba7643",
+            city: "10161",
+            area: "Kali Paltan",
+            totalRatingsString: "500+ ratings",
+            cloudinaryImageId: "sagskbcm1be0zuhotxts",
+            cuisines: [
+                "Beverages",
+                "Chinese",
+                "Pizzas"
+            ],
+            tags: [],
+            costForTwo: 20000,
+            costForTwoString: "₹200 FOR TWO",
+            deliveryTime: 21,
+            minDeliveryTime: 21,
+            maxDeliveryTime: 21,
+            slaString: "21 MINS",
+            lastMileTravel: 1.5,
+            slugs: {
+                restaurant: "pizza-bar-central-tonk-central-tonk",
+                city: "tonk_per_closed_8june22"
+            },
+            cityState: "10161",
+            address: "Zila Udhyog Kendra Ke Samne, Tonk",
+            locality: "Central Tonk",
+            parentId: 158340,
+            unserviceable: true,
+            veg: true,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 1900,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 1900,
+                message: "",
+                title: "Delivery Charge",
+                amount: "1900",
+                icon: ""
+            },
+            availability: {
+                opened: false,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.5 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "214307",
+                deliveryTime: 21,
+                minDeliveryTime: 21,
+                maxDeliveryTime: 21,
+                lastMileTravel: 1.5,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE_WITH_BANNER",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "3.6",
+            totalRatings: 500,
+            new: false
+        }
+    },
+    {
+        data: {
+            type: "F",
+            id: "411029",
+            name: "QMF",
+            uuid: "108558b3-d2a4-473c-8b50-3087092f539a",
+            city: "10161",
+            area: "Central Tonk",
+            totalRatingsString: "Too Few Ratings",
+            cloudinaryImageId: "raxujihuz5ps2t6zuxdd",
+            cuisines: [
+                "Fast Food",
+                "Pizzas",
+                "Bakery"
+            ],
+            tags: [],
+            costForTwo: 30000,
+            costForTwoString: "₹300 FOR TWO",
+            deliveryTime: 21,
+            minDeliveryTime: 21,
+            maxDeliveryTime: 21,
+            slaString: "21 MINS",
+            lastMileTravel: 1.600000023841858,
+            slugs: {
+                restaurant: "qmf-central-tonk-central-tonk",
+                city: "tonk_per_closed_8june22"
+            },
+            cityState: "10161",
+            address: "QMF, Raj talkies road ward 17, Tonk Ward 17, Tonk, Rajasthan",
+            locality: "Central Tonk",
+            parentId: 253129,
+            unserviceable: true,
+            veg: false,
+            select: false,
+            favorite: false,
+            tradeCampaignHeaders: [],
+            chain: [],
+            feeDetails: {
+                fees: [
+                    {
+                        name: "distance",
+                        fee: 1900,
+                        message: ""
+                    },
+                    {
+                        name: "time",
+                        fee: 0,
+                        message: ""
+                    },
+                    {
+                        name: "special",
+                        fee: 0,
+                        message: ""
+                    }
+                ],
+                totalFees: 1900,
+                message: "",
+                title: "Delivery Charge",
+                amount: "1900",
+                icon: ""
+            },
+            availability: {
+                opened: false,
+                nextOpenMessage: "",
+                nextCloseMessage: ""
+            },
+            longDistanceEnabled: 0,
+            rainMode: "NONE",
+            thirdPartyAddress: false,
+            thirdPartyVendor: "",
+            adTrackingID: "",
+            badges: {
+                imageBased: [],
+                textBased: [],
+                textExtendedBadges: []
+            },
+            lastMileTravelString: "1.6 kms",
+            hasSurge: false,
+            sla: {
+                restaurantId: "411029",
+                deliveryTime: 21,
+                minDeliveryTime: 21,
+                maxDeliveryTime: 21,
+                lastMileTravel: 1.600000023841858,
+                lastMileDistance: 0,
+                serviceability: "SERVICEABLE_WITH_BANNER",
+                rainMode: "NONE",
+                longDistance: "NOT_LONG_DISTANCE",
+                preferentialService: false,
+                iconType: "EMPTY"
+            },
+            promoted: false,
+            avgRating: "--",
+            totalRatings: 0,
+            new: false
+        }
+    }
+];
+const IMG_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2h6sC":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b743 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b743.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function SearchBar() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+        className: "SearchBar",
+        type: "text",
+        placeholder: "Search for restaurants, cuisines or a dish..."
+    }, void 0, false, {
+        fileName: "Components/SearchBar.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this);
+}
+_c = SearchBar;
+exports.default = SearchBar;
+var _c;
+$RefreshReg$(_c, "SearchBar");
+
+  $parcel$ReactRefreshHelpers$b743.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequire26a4")
 
 //# sourceMappingURL=index.7826abd7.js.map
