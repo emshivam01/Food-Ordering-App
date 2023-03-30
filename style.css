@@ -33,10 +33,14 @@ button {
   width: 600px;
   border-radius: 8px;
   outline: none;
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
+  text-align: center;
 }
 
 input::placeholder {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -52,30 +56,29 @@ input::placeholder {
 }
 
 .Card > h2 {
-    font-size: 22px;
-    margin: 10px 0px;
+  font-size: 22px;
+  margin: 10px 0px;
 }
 
-.Card  p {
-    font-size: 18px;
+.Card p {
+  font-size: 18px;
 }
 
-
-.Details { 
-    display:  flex;
-    justify-content: space-between;
+.Details {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Card button {
-    margin: 15px 0px;
-    width: 100%;
-    border:  none;
-    background-color: #f8761b;
-    color: #fefefe;
-    font-weight: bold;
+  margin: 15px 0px;
+  width: 100%;
+  border: none;
+  background-color: #f8761b;
+  color: #fefefe;
+  font-weight: bold;
 }
 
 .Cards {
-    display:  flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
