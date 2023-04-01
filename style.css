@@ -34,7 +34,7 @@ button {
   border-radius: 8px;
   outline: none;
   display: block;
-  margin: 20px auto;
+  margin: 20px 0px;
   font-size: 20px;
   text-align: center;
 }
@@ -81,4 +81,16 @@ input::placeholder {
 .Cards {
   display: flex;
   flex-wrap: wrap;
+}
+
+.search-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.src-btn {
+  width: auto;
+  padding: 10px;
 }
