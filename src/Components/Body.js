@@ -1,14 +1,31 @@
 import RestaurantCard from "./RestaurantCards";
-import { restaurantList } from "../src/config";
-import { useState } from "react";
+import { restaurantList } from "../config";
+import { useState, useEffect } from "react";
 
 function Body() {
   const [restaurant, setRestaurant] = useState(restaurantList);
   const [searchText, setSearchText] = useState("");
 
+  async function fetchingData() {
+    const Data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.4358011&lng=81.846311&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING"
+    );
+
+    const json = await Data.json();
+    console.log(json);
+  }
+
+  useEffect(() => {
+    console.log("useEffect");
+    const ogData = fetchingData();
+
+    // setRestaurant(ogData?.data?.cards);
+    console.log(ogData, "Line No. 22");
+  }, []);
+
   function searchRestr(searchText, restaurant) {
     filteredRestaraunt = restaurant.filter((restaurant) =>
-      restaurant.data.name.includes(searchText)
+      restaurant.data?.data?.name.includes(searchText)
     );
     return filteredRestaraunt;
   }
@@ -29,7 +46,6 @@ function Body() {
             className="src-btn"
             onClick={() => {
               const Data = searchRestr(searchText, restaurantList);
-
               setRestaurant(Data);
             }}
           >
@@ -38,7 +54,6 @@ function Body() {
         </div>
 
         <div className="Cards">
-          <h1>{console.log(restaurant)}</h1>
           {restaurant.map((restaurant) => {
             return (
               <RestaurantCard {...restaurant.data} key={restaurant.data.id} />

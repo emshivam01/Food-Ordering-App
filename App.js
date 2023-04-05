@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Body from "./Components/Body";
-import Navbar from "./Components/Navbar";
-import RestaurantCard from "./Components/RestaurantCards";
+import Body from "./src/Components/Body";
+import Navbar from "./src/Components/Navbar";
+import RestaurantCard from "./src/Components/RestaurantCards";
 
 const AppLayout = () => {
   return (

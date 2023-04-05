@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+/* ICONS STYLING */
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 40;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: "Poppins", sans-serif;
 }
 
 .logo {
@@ -45,8 +53,8 @@ input::placeholder {
 }
 
 .Card {
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 400px;
   padding: 20px 40px;
 }
 
@@ -58,6 +66,17 @@ input::placeholder {
 .Card > h2 {
   font-size: 22px;
   margin: 10px 0px;
+}
+
+.otherDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.timing {
+  display: flex;
+  gap: 8px;
 }
 
 .Card p {
