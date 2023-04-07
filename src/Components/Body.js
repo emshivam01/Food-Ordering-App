@@ -10,17 +10,13 @@ function Body() {
     const Data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.4358011&lng=81.846311&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING"
     );
-
     const json = await Data.json();
     console.log(json);
+    setRestaurant(json?.data?.cards);
   }
 
   useEffect(() => {
-    console.log("useEffect");
-    const ogData = fetchingData();
-
-    // setRestaurant(ogData?.data?.cards);
-    console.log(ogData, "Line No. 22");
+    fetchingData();
   }, []);
 
   function searchRestr(searchText, restaurant) {
@@ -54,10 +50,8 @@ function Body() {
         </div>
 
         <div className="Cards">
-          {restaurant.map((restaurant) => {
-            return (
-              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
-            );
+          {restaurant.map((restaurant, i) => {
+            return <RestaurantCard {...restaurant.data.data} key={i} />;
           })}
         </div>
       </div>
