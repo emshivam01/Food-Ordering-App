@@ -113,3 +113,11 @@ input::placeholder {
   width: auto;
   padding: 10px;
 }
+
+.shimmer-ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  height: 70vh;
+}

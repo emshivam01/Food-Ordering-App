@@ -5,8 +5,8 @@ const Navbar = () => {
     <div className="Navbar">
       <img className="logo" src={logo} />
       <div className="Nav-items">
+        
         <button>Log in</button>
-        <button>Sign up</button>
         <button>Cart</button>
       </div>
     </div>

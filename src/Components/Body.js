@@ -1,9 +1,11 @@
 import RestaurantCard from "./RestaurantCards";
 import { restaurantList } from "../config";
 import { useState, useEffect } from "react";
+import ShimmerUI from "./ShimmerUI";
 
 function Body() {
-  const [restaurant, setRestaurant] = useState(restaurantList);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [allRestaurant, setAllRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   async function fetchingData() {
@@ -11,8 +13,9 @@ function Body() {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.4358011&lng=81.846311&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING"
     );
     const json = await Data.json();
-    console.log(json);
-    setRestaurant(json?.data?.cards);
+    // console.log(json, "Line 15");
+    setAllRestaurant(json?.data?.cards);
+    setFilteredRestaurant(json?.data?.cards);
   }
 
   useEffect(() => {
@@ -21,13 +24,20 @@ function Body() {
 
   function searchRestr(searchText, restaurant) {
     filteredRestaraunt = restaurant.filter((restaurant) =>
-      restaurant.data?.data?.name.includes(searchText)
+      restaurant.data?.data?.name
+        ?.toLowerCase()
+        .includes(searchText.toLowerCase())
     );
     return filteredRestaraunt;
   }
 
-  return (
+  // if (restaurant.length === 0) return restaurant;
+
+  return allRestaurant.length === 0 ? (
+    <ShimmerUI />
+  ) : (
     <>
+      <h1>{console.log(filteredRestaurant)}</h1>
       <div className="Body">
         <div className="search-Container">
           <input
@@ -41,8 +51,9 @@ function Body() {
           <button
             className="src-btn"
             onClick={() => {
-              const Data = searchRestr(searchText, restaurantList);
-              setRestaurant(Data);
+              const Data = searchRestr(searchText, allRestaurant);
+              setFilteredRestaurant(Data);
+              console.log(Data, "Line 47");
             }}
           >
             Search
@@ -50,8 +61,13 @@ function Body() {
         </div>
 
         <div className="Cards">
-          {restaurant.map((restaurant, i) => {
-            return <RestaurantCard {...restaurant.data.data} key={i} />;
+          {filteredRestaurant.map((restaurant, i) => {
+            if (
+              restaurant?.data?.data?.name &&
+              restaurant?.data?.data?.cloudinaryImageId
+            ) {
+              return <RestaurantCard {...restaurant.data.data} key={i} />;
+            }
           })}
         </div>
       </div>
