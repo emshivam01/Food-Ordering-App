@@ -3,16 +3,42 @@ import ReactDOM from "react-dom/client";
 import Body from "./src/Components/Body";
 import Navbar from "./src/Components/Navbar";
 import RestaurantCard from "./src/Components/RestaurantCards";
+import Contact from "./src/Components/Contact";
+import About from "./src/Components/About";
+import CustomError from "./src/Components/customError";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <>
       <Navbar />
-      <Body />
+      <Outlet />
     </>
   );
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <CustomError />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
