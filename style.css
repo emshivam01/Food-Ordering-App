@@ -63,9 +63,9 @@ input::placeholder {
 }
 
 .Card:hover {
-  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
--webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   transition: all 130ms ease-in-out;
 }
@@ -209,4 +209,20 @@ input::placeholder {
 
 .contact-details span {
   font-weight: 700;
+}
+
+/* ------------ ABOUT US PAGE ------------ */
+
+.about-container {
+  padding: 60px;
+  height: 70vh;
+}
+
+.about-container h1 {
+  font-size: 50px;
+}
+
+.about-container p {
+  font-size: 20px;
+  margin-top: 10px;
 }
