@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCards";
 import { restaurantList } from "../config";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
+import { Link } from "react-router-dom";
 
 function Body() {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -66,7 +67,14 @@ function Body() {
               restaurant?.data?.data?.name &&
               restaurant?.data?.data?.cloudinaryImageId
             ) {
-              return <RestaurantCard {...restaurant.data.data} key={i} />;
+              return (
+                <Link to={"/restaurants/" + restaurant.data.data.id}>
+                  <RestaurantCard
+                    {...restaurant.data.data}
+                    key={restaurant.data.data.id}
+                  />
+                </Link>
+              );
             }
           })}
         </div>
