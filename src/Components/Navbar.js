@@ -11,7 +11,9 @@ const Navbar = () => {
         <Link to="/contact">Contact</Link>
       </div>
       <div className="Nav-items">
-        <button>Log in</button>
+        <Link to="/signup">
+          <button>Log in</button>
+        </Link>
         <button>Cart</button>
       </div>
     </div>
