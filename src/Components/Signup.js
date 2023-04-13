@@ -10,18 +10,17 @@ const Signup = () => {
         }}
       >
         <Form onSubmit={Formik.onSubmit}>
-          <label htmlFor="name">Name:</label>
-
-          <Field type="text" id="name" name="Name" placeholder="Mike" />
-
-          <label htmlFor="email">email:</label>
+          <label htmlFor="email">Email:</label>
 
           <Field
             type="email"
             id="email"
             name="Email"
-            placeholder="mike@yahoo.com"
+            placeholder="Enter your email"
           />
+          <label htmlFor="name">Password:</label>
+
+          <Field type="password"  id="name" name="Name" required placeholder="Enter your password"  />
 
           <button type="submit">Submit</button>
         </Form>

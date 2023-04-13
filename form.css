@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Raleway:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-container {
+}
+
+form {
+  display: flex;
+  max-width: 400px;
+  border: 2px solid #ac2727;
+  margin: 100px auto;
+  flex-direction: column;
+  height: 400px;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 40px;
+  border-radius: 6px;
+}
+
+input::placeholder {
+  text-align: left;
+  font-size: 15px;
+}
+
+/* input[type="password"] {
+    -webkit-text-security: disc,
+    font-size: 20px
+} */
+
+input [type="password"] {
+  font-family: Verdana;
+  letter-spacing: 0.125em;
+  letter-spacing: 1em;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
