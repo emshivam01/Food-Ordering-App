@@ -7,7 +7,7 @@ import Contact from "./src/Components/Contact";
 import About from "./src/Components/About";
 import CustomError from "./src/Components/customError";
 import Restaurant from "./src/Components/Restaurant";
-import Signup from "./src/Components/Signup";
+import Login from "./src/Components/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
@@ -42,8 +42,8 @@ const appRouter = createBrowserRouter([
         element: <Restaurant />,
       },
       {
-        path: "/signup",
-        element: <Signup />,
+        path: "/login",
+        element: <Login />,
       },
     ],
   },

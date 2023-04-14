@@ -1,7 +1,9 @@
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
     <div className="Navbar">
       <img className="logo" src={logo} />
@@ -11,9 +13,11 @@ const Navbar = () => {
         <Link to="/contact">Contact</Link>
       </div>
       <div className="Nav-items">
-        <Link to="/signup">
-          <button>Log in</button>
-        </Link>
+        {!(pathname == "/login") ? (
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        ) : null}
         <button>Cart</button>
       </div>
     </div>

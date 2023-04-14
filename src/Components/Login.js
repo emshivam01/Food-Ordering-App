@@ -1,6 +1,12 @@
 import { Formik, Form, Field } from "formik";
+import { EMAIL, PASSWORD } from "../config.js";
+import { useState } from "react";
 
-const Signup = () => {
+const Login = () => {
+  const [email, setEmail] = useState("");
+
+  const formValidator = () => {};
+
   return (
     <div className="form-container">
       <Formik
@@ -20,7 +26,13 @@ const Signup = () => {
           />
           <label htmlFor="name">Password:</label>
 
-          <Field type="password"  id="name" name="Name" required placeholder="Enter your password"  />
+          <Field
+            type="password"
+            id="name"
+            name="Name"
+            required
+            placeholder="Enter your password"
+          />
 
           <button type="submit">Submit</button>
         </Form>
@@ -29,4 +41,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;
