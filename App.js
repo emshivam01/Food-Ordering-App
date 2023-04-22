@@ -8,6 +8,7 @@ import About from "./src/Components/About";
 import CustomError from "./src/Components/customError";
 import Restaurant from "./src/Components/Restaurant";
 import Login from "./src/Components/Login";
+import QuoteOfTheDay from "./src/Components/QuoteOfTheDayClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/quote",
+        element: <QuoteOfTheDay />,
       },
       {
         path: "/restaurants/:id",

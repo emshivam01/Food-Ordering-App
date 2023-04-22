@@ -260,7 +260,6 @@ input::placeholder {
 .name-and-rating p {
   font-size: 24px;
   font-weight: 700;
-
 }
 
 .restaurant-cuisine {
@@ -290,12 +289,21 @@ input::placeholder {
   margin-bottom: 10px;
 }
 
-
-.restaurant-menu {
-  /* border: 2px solid black; */
-}
-
 .restaurant-menu li {
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+/* ----------------- Quote of the Day ----------------- */
+
+.quoteBox {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quoteBox span {
+  font-size: 40px;
+  font-weight: 500;
 }
