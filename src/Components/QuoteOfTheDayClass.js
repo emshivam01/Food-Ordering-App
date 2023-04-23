@@ -20,7 +20,14 @@ class QuoteOfTheDay extends React.Component {
       Author: quote[10].author,
     });
 
+    this.timer = setInterval(() => console.log("Interval Line - 23"), 1000);
+
     console.log("componentDidMount");
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    console.log("componentWillUnmount");
   }
 
   render() {
@@ -28,7 +35,7 @@ class QuoteOfTheDay extends React.Component {
     return (
       <div className="quoteBox">
         <span>
-          " {this.state.Quote} - {this.state.Author} "
+          {this.props.name} - " {this.state.Quote} - {this.state.Author} "
         </span>
       </div>
     );

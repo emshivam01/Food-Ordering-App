@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import Body from "./src/Components/Body";
 import Navbar from "./src/Components/Navbar";
 import RestaurantCard from "./src/Components/RestaurantCards";
@@ -40,7 +40,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/quote",
-        element: <QuoteOfTheDay />,
+        element: <QuoteOfTheDay name={"Quote"} />,
       },
       {
         path: "/restaurants/:id",
