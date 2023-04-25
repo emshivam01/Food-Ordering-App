@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IMG_URL } from "../config";
+import { IMG_URL, RESTAURANT_DATA_URL } from "../config";
 
 const Restaurant = () => {
   const { id } = useParams();
@@ -8,10 +8,7 @@ const Restaurant = () => {
   const [RestaurantData, setRestaurantData] = useState();
 
   async function getRrestaurants() {
-    const Data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.4358011&lng=81.846311&restaurantId=" +
-        id
-    );
+    const Data = await fetch(RESTAURANT_DATA_URL + id);
     const data = await Data.json();
     setRestaurantData(data);
   }

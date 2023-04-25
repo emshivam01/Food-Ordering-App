@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCards";
-import { restaurantList } from "../config";
+import { RESTAURANTS_DATA_URL } from "../config";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
@@ -10,11 +10,8 @@ function Body() {
   const [searchText, setSearchText] = useState("");
 
   async function fetchingData() {
-    const Data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.4358011&lng=81.846311&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING"
-    );
+    const Data = await fetch(RESTAURANTS_DATA_URL);
     const json = await Data.json();
-    // console.log(json, "Line 15");
     setAllRestaurant(json?.data?.cards);
     setFilteredRestaurant(json?.data?.cards);
   }
@@ -31,8 +28,6 @@ function Body() {
     );
     return filteredRestaraunt;
   }
-
-  // if (restaurant.length === 0) return restaurant;
 
   return allRestaurant.length === 0 ? (
     <ShimmerUI />
