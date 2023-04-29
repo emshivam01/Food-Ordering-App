@@ -35,7 +35,7 @@ class QuoteOfTheDay extends React.Component {
     return (
       <div className="quoteBox">
         <span>
-          {this.props.name} - " {this.state.Quote} - {this.state.Author} "
+          " {this.state.Quote} - {this.state.Author} "
         </span>
       </div>
     );

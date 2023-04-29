@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
 import { searchRestr } from "../../utlis/utils";
+import useNetworkStatus from "../../utlis/useNetworkStatus";
 
 function Body() {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -20,6 +21,16 @@ function Body() {
   useEffect(() => {
     fetchingData();
   }, []);
+
+  const NetworkStatus = useNetworkStatus();
+
+  if (!NetworkStatus) {
+    return (
+      <h1 className="Network-error">
+        🔴 Please Check Your Internet Connection
+      </h1>
+    );
+  }
 
   return allRestaurant.length === 0 ? (
     <ShimmerUI />

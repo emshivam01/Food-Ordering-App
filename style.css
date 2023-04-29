@@ -12,6 +12,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+.Network-error {
+  text-align: center;
+  margin-top: 100px;
+}
+
 .logo {
   width: 100px;
   border-radius: 50%;

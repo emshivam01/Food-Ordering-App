@@ -7,15 +7,15 @@ const useGetRestaurantDetais = () => {
 
   const { id } = useParams();
 
+  useEffect(() => {
+    getRrestaurants();
+  }, []);
+
   async function getRrestaurants() {
     const Data = await fetch(RESTAURANT_DATA_URL + id);
     const data = await Data.json();
     setRestaurantData(data);
   }
-
-  useEffect(() => {
-    getRrestaurants();
-  }, []);
 
   return RestaurantData;
 };
