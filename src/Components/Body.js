@@ -3,6 +3,7 @@ import { RESTAURANTS_DATA_URL } from "../config";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
+import { searchRestr } from "../../utlis/utils";
 
 function Body() {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -19,15 +20,6 @@ function Body() {
   useEffect(() => {
     fetchingData();
   }, []);
-
-  function searchRestr(searchText, restaurant) {
-    filteredRestaraunt = restaurant.filter((restaurant) =>
-      restaurant.data?.data?.name
-        ?.toLowerCase()
-        .includes(searchText.toLowerCase())
-    );
-    return filteredRestaraunt;
-  }
 
   return allRestaurant.length === 0 ? (
     <ShimmerUI />

@@ -1,21 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { IMG_URL, RESTAURANT_DATA_URL } from "../config";
+import { IMG_URL } from "../config";
+import useGetRestaurantDetais from "../../utlis/useGetRestaurantDetails";
 
 const Restaurant = () => {
-  const { id } = useParams();
-
-  const [RestaurantData, setRestaurantData] = useState();
-
-  async function getRrestaurants() {
-    const Data = await fetch(RESTAURANT_DATA_URL + id);
-    const data = await Data.json();
-    setRestaurantData(data);
-  }
-
-  useEffect(() => {
-    getRrestaurants();
-  }, []);
+  const RestaurantData = useGetRestaurantDetais();
 
   return (
     <>
