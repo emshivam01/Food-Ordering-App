@@ -15,6 +15,11 @@ const useNetworkStatus = () => {
     window.addEventListener("online", OnlineStatus);
 
     window.addEventListener("offline", OfflineStatus);
+
+    return () => {
+      window.removeEventListener("online", OnlineStatus);
+      window.removeEventListener("offline", OfflineStatus);
+    };
   }, []);
   return NetworkStatus;
 };
