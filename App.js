@@ -1,4 +1,5 @@
 import React from "react";
+import { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import Body from "./src/Components/Body";
 import Navbar from "./src/Components/Navbar";
@@ -8,8 +9,10 @@ import About from "./src/Components/About";
 import CustomError from "./src/Components/customError";
 import Restaurant from "./src/Components/Restaurant";
 import Login from "./src/Components/Login";
-import QuoteOfTheDay from "./src/Components/QuoteOfTheDayClass";
+// import QuoteOfTheDay from "./src/Components/QuoteOfTheDayClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+const QuoteOfTheDay = lazy(() => import("./src/Components/QuoteOfTheDayClass"));
 
 const AppLayout = () => {
   return (
@@ -40,7 +43,11 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/quote",
-        element: <QuoteOfTheDay name={"Quote"} />,
+        element: (
+          <Suspense>
+            <QuoteOfTheDay name={"Quote"} />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurants/:id",
