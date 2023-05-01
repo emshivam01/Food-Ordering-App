@@ -33,8 +33,8 @@ class QuoteOfTheDay extends React.Component {
   render() {
     console.log("render");
     return (
-      <div className="quoteBox">
-        <span>
+      <div className=" flex justify-center items-center mt-48">
+        <span className="text-4xl font-bold">
           " {this.state.Quote} - {this.state.Author} "
         </span>
       </div>

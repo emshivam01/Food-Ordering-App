@@ -5,8 +5,10 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="flex justify-between items-center px-10 py-5">
-      <img className="w-28 rounded-full" src={logo} />
+    <div className="flex justify-between items-center px-10 py-2 shadow-lg">
+      <Link to="/">
+        <img className="w-24 rounded-full shadow-lg" src={logo} />
+      </Link>
       <div className="Nav-items">
         <Link
           className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"

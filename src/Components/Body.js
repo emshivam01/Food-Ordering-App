@@ -36,10 +36,10 @@ function Body() {
     <ShimmerUI />
   ) : (
     <>
-      <div className="Body">
-        <div className="">
+      <div className="my-10">
+        <div className="flex justify-center items-center gap-4 p-2 mb-10">
           <input
-            className="border-2 border-gray-700 w-72"
+            className="w-[420px] h-10 px-4 py-1 text-lg text-center font-medium border-2 border-gray-400 rounded "
             type="text"
             value={searchText}
             onChange={(e) => {
@@ -47,7 +47,7 @@ function Body() {
             }}
           />
           <button
-            className="src-btn"
+            className="bg-gray-600 px-4 h-10 py-1 text-white text-lg font-medium rounded"
             onClick={() => {
               const Data = searchRestr(searchText, allRestaurant);
               setFilteredRestaurant(Data);
@@ -58,7 +58,7 @@ function Body() {
           </button>
         </div>
 
-        <div className="flex flex-wrap px-10 gap-10">
+        <div className="flex flex-wrap px-16 gap-10">
           {filteredRestaurant.map((restaurant, i) => {
             if (
               restaurant?.data?.data?.name &&
