@@ -5,21 +5,45 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="Navbar">
-      <img className="logo" src={logo} />
+    <div className="flex justify-between items-center px-10 py-5">
+      <img className="w-28 rounded-full" src={logo} />
       <div className="Nav-items">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/quote">Quote Of The Day</Link>
+        <Link
+          className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"
+          to="/"
+        >
+          Home
+        </Link>
+        <Link
+          className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"
+          to="/about"
+        >
+          About
+        </Link>
+        <Link
+          className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"
+          to="/contact"
+        >
+          Contact
+        </Link>
+        <Link
+          className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"
+          to="/quote"
+        >
+          Quote Of The Day
+        </Link>
       </div>
-      <div className="Nav-items">
+      <div className="flex gap-5">
         {!(pathname == "/login") ? (
           <Link to="/login">
-            <button>Login</button>
+            <button className="p-2 px-5 font-medium text-xl border-2 border-gray-800 rounded-md hover:bg-black hover:text-white transition-colors delay-100">
+              Login
+            </button>
           </Link>
         ) : null}
-        <button>Cart</button>
+        <button className="p-2 px-5 font-medium text-xl  border-2 border-gray-800 rounded-md hover:bg-black hover:text-white transition-colors delay-100">
+          Cart
+        </button>
       </div>
     </div>
   );

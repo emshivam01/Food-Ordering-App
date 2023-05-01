@@ -36,11 +36,10 @@ function Body() {
     <ShimmerUI />
   ) : (
     <>
-      <h1>{console.log(filteredRestaurant)}</h1>
       <div className="Body">
-        <div className="search-Container">
+        <div className="">
           <input
-            className="SearchBar"
+            className="border-2 border-gray-700 w-72"
             type="text"
             value={searchText}
             onChange={(e) => {
@@ -59,7 +58,7 @@ function Body() {
           </button>
         </div>
 
-        <div className="Cards">
+        <div className="flex flex-wrap px-10 gap-10">
           {filteredRestaurant.map((restaurant, i) => {
             if (
               restaurant?.data?.data?.name &&
