@@ -6,7 +6,7 @@ class QuoteOfTheDay extends React.Component {
 
     this.state = {
       Quote: "Quote will come here soon",
-      Author: "Author",
+      // Author: "Author",
     };
     console.log("Constructor");
   }
@@ -14,10 +14,9 @@ class QuoteOfTheDay extends React.Component {
   async componentDidMount() {
     const data = await fetch("https://type.fit/api/quotes");
     const quote = await data.json();
-    console.log(quote[101].text);
     this.setState({
-      Quote: quote[10].text,
-      Author: quote[10].author,
+      Quote: quote[Math.floor(Math.random() * 100) + 1].text,
+      // Author: quote[10].author,
     });
 
     this.timer = setInterval(() => console.log("Interval Line - 23"), 1000);
@@ -33,9 +32,9 @@ class QuoteOfTheDay extends React.Component {
   render() {
     console.log("render");
     return (
-      <div className=" flex justify-center items-center mt-48">
+      <div className=" flex justify-center items-center h-[70vh]">
         <span className="text-4xl font-bold">
-          " {this.state.Quote} - {this.state.Author} "
+          " {this.state.Quote}  {this.state.Author} "
         </span>
       </div>
     );

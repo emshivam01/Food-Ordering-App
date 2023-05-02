@@ -1,10 +1,10 @@
 function ShimmerUI() {
   return (
-    <div className="Cards shimmer-ui">
-      {Array(10)
+    <div className="flex flex-wrap between my-24 px-20">
+      {Array(20)
         .fill(" ")
         .map((i, index) => (
-          <div className="shimmer-Cards" key={index}></div>
+          <div className="bg-gray-300 w-60 h-64 m-6 rounded-md" key={index}></div>
         ))}
     </div>
   );

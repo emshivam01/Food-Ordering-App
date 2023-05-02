@@ -8,7 +8,7 @@ const RestaurantCard = ({
   name,
 }) => {
   return (
-    <div className="flex flex-col justify-between w-64 h-80 border-2 border-gray-200 p-3 shadow-lg rounded-lg hover:scale-105 transition-all delay-75 ">
+    <div className="flex flex-col justify-between w-64 h-80 border-2 border-gray-100 p-3 shadow-lg rounded-lg hover:scale-105 transition-all delay-75 ">
       <img className="rounded-md shadow-md" src={IMG_URL + cloudinaryImageId} />
       <h2 className="truncate text-xl font-semibold" title={name}>
         {name}
