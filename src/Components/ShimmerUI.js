@@ -4,7 +4,10 @@ function ShimmerUI() {
       {Array(20)
         .fill(" ")
         .map((i, index) => (
-          <div className="bg-gray-300 w-60 h-64 m-6 rounded-md" key={index}></div>
+          <div
+            className="bg-gray-300 w-60 h-64 m-6 rounded-md animate-pulse"
+            key={index}
+          ></div>
         ))}
     </div>
   );

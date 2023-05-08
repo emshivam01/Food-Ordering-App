@@ -1,7 +1,9 @@
 const Contact = () => {
   return (
     <div className=" px-20 my-12">
-      <h1 className="text-4xl font-bold underline underline-offset-8">Reach out to us...</h1>
+      <h1 className="text-4xl font-bold underline underline-offset-8">
+        Reach out to us...
+      </h1>
       <p className="mt-10 text-2xl font-medium">
         Welcome to our contact page! We appreciate your interest in getting in
         touch with us.

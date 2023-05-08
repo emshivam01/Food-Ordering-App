@@ -34,6 +34,12 @@ const Navbar = () => {
         >
           Quote Of The Day
         </Link>
+        <Link
+          className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"
+          to="/faqs"
+        >
+          FAQs
+        </Link>
       </div>
       <div className="flex gap-5">
         {!(pathname == "/login") ? (

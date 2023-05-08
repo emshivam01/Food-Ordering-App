@@ -11,6 +11,7 @@ import Restaurant from "./src/Components/Restaurant";
 import Login from "./src/Components/Login";
 // import QuoteOfTheDay from "./src/Components/QuoteOfTheDayClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Faq from "./src/Components/Faq";
 
 const QuoteOfTheDay = lazy(() => import("./src/Components/QuoteOfTheDayClass"));
 
@@ -48,6 +49,10 @@ const appRouter = createBrowserRouter([
             <QuoteOfTheDay name={"Quote"} />
           </Suspense>
         ),
+      },
+      {
+        path: "/faqs",
+        element: <Faq />,
       },
       {
         path: "/restaurants/:id",
