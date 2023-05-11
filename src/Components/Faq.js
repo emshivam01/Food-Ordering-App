@@ -27,23 +27,24 @@ const Section = ({ name, para, isVisible, setIsVisible }) => {
 };
 
 const Faq = () => {
-  const [visibleSec, setVisibleSec] = useState("second");
+  const [visibleSec, setVisibleSec] = useState();
+
   return (
     <div>
       <Section
         name={"First FAQ "}
         para={para}
         isVisible={visibleSec === "first"}
-        setIsVisible={() => {
-          setVisibleSec("first");
-        }}
+        setIsVisible={() =>
+          setVisibleSec(visibleSec === "first" ? "" : "first")
+        }
       />
       <Section
         name={"Second FAQ "}
         para={para}
         isVisible={visibleSec === "second"}
         setIsVisible={() => {
-          setVisibleSec("second");
+          setVisibleSec(visibleSec === "second" ? "" : "second");
         }}
       />
       <Section
@@ -51,7 +52,7 @@ const Faq = () => {
         para={para}
         isVisible={visibleSec === "third"}
         setIsVisible={() => {
-          setVisibleSec("third");
+          setVisibleSec(visibleSec === "third" ? "" : "third");
         }}
       />
     </div>
