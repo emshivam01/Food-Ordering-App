@@ -36,7 +36,7 @@ function Body() {
     <ShimmerUI />
   ) : (
     <>
-      <div className="my-10">
+      <div className="my-10 " >
         <div className="flex justify-center items-center gap-4 p-2 mb-10">
           <input
             className="w-[420px] h-10 px-4 py-1 text-lg text-center font-medium border-2 border-gray-400 rounded "

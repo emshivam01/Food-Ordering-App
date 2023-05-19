@@ -5,13 +5,11 @@ const para =
 
 const Section = ({ name, para, isVisible, setIsVisible }) => {
   return (
-    <div className="bg-[#118091] border-2 border-gray-300 shadow-lg m-10 p-2 px-4 rounded-lg">
+    <div className="bg-[#118091] shadow-lg m-10 p-2 px-4 rounded-lg">
       <div className="flex justify-between">
         <h1 className="text-2xl font-semibold text-white">{name}</h1>
         <button
-          onClick={() => {
-            isVisible ? setIsVisible(false) : setIsVisible(true);
-          }}
+          onClick={() => setIsVisible()}
           className="text-2xl font-semibold cursor-pointer"
         >
           <span className="material-symbols-rounded text-4xl font-semibold text-white cursor-pointer">
@@ -20,7 +18,7 @@ const Section = ({ name, para, isVisible, setIsVisible }) => {
         </button>
       </div>
       {isVisible && (
-        <p className="text-lg font-normal text-white mt-3">{para}</p>
+        <p className="text-lg font-normal text-white mt-3 ">{para}</p>
       )}
     </div>
   );

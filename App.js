@@ -12,6 +12,7 @@ import Login from "./src/Components/Login";
 // import QuoteOfTheDay from "./src/Components/QuoteOfTheDayClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Faq from "./src/Components/Faq";
+import Footer from "./src/Components/Footer";
 
 const QuoteOfTheDay = lazy(() => import("./src/Components/QuoteOfTheDayClass"));
 
@@ -20,6 +21,7 @@ const AppLayout = () => {
     <>
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   );
 };
