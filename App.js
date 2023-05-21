@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import Body from "./src/Components/Body";
@@ -9,19 +9,26 @@ import About from "./src/Components/About";
 import CustomError from "./src/Components/customError";
 import Restaurant from "./src/Components/Restaurant";
 import Login from "./src/Components/Login";
-// import QuoteOfTheDay from "./src/Components/QuoteOfTheDayClass";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Faq from "./src/Components/Faq";
 import Footer from "./src/Components/Footer";
+import BrandNameContext from "./utlis/BrandNameContext";
+import ChangeBrandName from "./src/Components/ChangeBrandName";
 
 const QuoteOfTheDay = lazy(() => import("./src/Components/QuoteOfTheDayClass"));
 
 const AppLayout = () => {
+  const value = useContext(BrandNameContext);
+
+  const [name, setName] = useState("Meal Magic");
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+      <BrandNameContext.Provider value={{ name, setName }}>
+        <Navbar />
+        <ChangeBrandName />
+        <Outlet />
+        <Footer />
+      </BrandNameContext.Provider>
     </>
   );
 };

@@ -1,9 +1,6 @@
-import RestaurantContext from "../../utlis/useRestaurantContext";
 import { useContext } from "react";
 
 const About = () => {
-  const { restaurant } = useContext(RestaurantContext);
-
   return (
     <div className=" px-20 my-12">
       <h1 className="text-4xl font-bold underline underline-offset-8">About</h1>
@@ -12,8 +9,6 @@ const About = () => {
         passionate foodies who <br /> love to connect people with their favorite{" "}
         <br /> local restaurants and delicious cuisines.”
       </p>
-
-      <span>{restaurant.name}</span>
     </div>
   );
 };
