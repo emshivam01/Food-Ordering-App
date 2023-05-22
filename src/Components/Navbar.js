@@ -2,22 +2,25 @@
 import { useContext, useState } from "react";
 import logo from "../../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
-import BrandNameContext from "../../utlis/BrandNameContext";
+import RestaurantContext from "../../utlis/useRestaurantContext";
 
 const Navbar = () => {
   const { pathname } = useLocation();
 
-  const { name } = useContext(BrandNameContext);
+  const [brandName, setBrandName] = useState("Meal Magic");
+
+  const BrandName = useContext(RestaurantContext);
 
   return (
     <div className="flex justify-between items-center px-12 py-4 shadow-lg rounded-b-lg">
-      {console.log(name)}
-      <Link
-        className="Brand-name text-2xl font-bold underline underline-offset-8"
-        to="/"
-      >
-        {name}
-      </Link>
+      <RestaurantContext.Provider value={}>
+        <Link
+          className="Brand-name text-2xl font-bold underline underline-offset-8"
+          to="/"
+        >
+          {brandName}
+        </Link>
+      </RestaurantContext.Provider>
       <div className="Nav-items">
         <Link
           className="p-3 font-medium text-xl hover:underline hover:underline-offset-4"
