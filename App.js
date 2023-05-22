@@ -12,6 +12,8 @@ import Login from "./src/Components/Login";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Faq from "./src/Components/Faq";
 import Footer from "./src/Components/Footer";
+import BrandNameContext from "./utlis/BrandNameContext";
+import ChangeBrandName from "./src/Components/ChangeBrandName";
 
 const QuoteOfTheDay = lazy(() => import("./src/Components/QuoteOfTheDayClass"));
 
