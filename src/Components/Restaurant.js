@@ -1,12 +1,20 @@
 import { useEffect, useState } from "react";
 import { IMG_URL } from "../config";
 import useGetRestaurantDetais from "../../utlis/useGetRestaurantDetails";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../utlis/cartSlice";
 
 const Restaurant = () => {
   const RestaurantData = useGetRestaurantDetais();
 
+  const dispatch = useDispatch();
+
+  const addToCart = (menu) => {
+    dispatch(addItem(menu));
+  };
+
   return (
-    <>
+    <>  
       <div className="flex justify-around p-20 ">
         <div className=" w-[450px] max-w-max border-2 border-gray-100 p-3 rounded-lg shadow-lg">
           <img
@@ -70,8 +78,19 @@ const Restaurant = () => {
           {RestaurantData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards.map(
             (menu, i) => {
               return (
-                <li className="text-xl font-medium mb-2" key={i}>
-                  {menu?.card?.info?.name}
+                <li
+                  className="flex justify-between items-center text-xl w-96 font-medium m-3 p-3 border-2 border-gray-200 rounded-md"
+                  key={i}
+                >
+                  {menu?.card?.info?.name}{" "}
+                  <button
+                    onClick={() => {
+                      addToCart(menu);
+                    }}
+                    className="px-3 bg-green-300  rounded-md shadow-md"
+                  >
+                    Add
+                  </button>
                 </li>
               );
             }

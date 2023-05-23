@@ -2,12 +2,16 @@ import { useContext, useState } from "react";
 import logo from "../../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import BrandNameContext from "../../utlis/BrandNameContext";
+import { useSelector } from "react-redux";
+import store from "../../utlis/Store";
 
 const Navbar = () => {
   const { pathname } = useLocation();
 
   const { name } = useContext(BrandNameContext);
 
+  const cartItem = useSelector((store) => store.cart.items);
+  console.log(cartItem);
   return (
     <div className="flex justify-between items-center px-12 py-4 shadow-lg rounded-b-lg">
       {console.log(name)}
@@ -57,9 +61,12 @@ const Navbar = () => {
             </button>
           </Link>
         ) : null}
-        <button className="p-2 px-5 font-medium text-xl  border-2 border-[#118091] rounded-md hover:bg-[#118091] hover:text-white transition-colors delay-100">
-          Cart
-        </button>
+        <Link
+          className="p-2 px-5 font-medium text-xl  border-2 border-[#118091] rounded-md hover:bg-[#118091] hover:text-white transition-colors delay-100"
+          to="/cart"
+        >
+          Cart - {cartItem.length}
+        </Link>
       </div>
     </div>
   );

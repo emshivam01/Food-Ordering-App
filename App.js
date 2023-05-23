@@ -14,6 +14,9 @@ import Faq from "./src/Components/Faq";
 import Footer from "./src/Components/Footer";
 import BrandNameContext from "./utlis/BrandNameContext";
 import ChangeBrandName from "./src/Components/ChangeBrandName";
+import { Provider } from "react-redux";
+import store from "./utlis/Store";
+import Cart from "./src/Components/Cart";
 
 const QuoteOfTheDay = lazy(() => import("./src/Components/QuoteOfTheDayClass"));
 
@@ -23,12 +26,14 @@ const AppLayout = () => {
   const [name, setName] = useState("Meal Magic");
   return (
     <>
-      <BrandNameContext.Provider value={{ name, setName }}>
-        <Navbar />
-        <ChangeBrandName />
-        <Outlet />
-        <Footer />
-      </BrandNameContext.Provider>
+      <Provider store={store}>
+        <BrandNameContext.Provider value={{ name, setName }}>
+          <Navbar />
+          <ChangeBrandName />
+          <Outlet />
+          <Footer />
+        </BrandNameContext.Provider>
+      </Provider>
     </>
   );
 };
@@ -70,6 +75,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
