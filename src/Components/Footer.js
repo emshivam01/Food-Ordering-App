@@ -7,7 +7,7 @@ const Footer = () => {
       </button>
 
       <span className="text-xl font-semibold ">
-        Copyright &#169; 2023 Meal Magic Inc. All Rights Reserved
+        Copyright &#169; 2023 Meal Magic Inc. All Rights Reserved.
       </span>
     </div>
   );
