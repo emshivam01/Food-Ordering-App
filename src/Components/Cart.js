@@ -19,7 +19,9 @@ const Cart = () => {
         ))}
       </div>
       <button
-        onClick={() => clearTheCart()}
+        onClick={() =>
+          cartItem.length === 0 ? alert("Nothing to Clear") : clearTheCart()
+        }
         className="px-8 py-3 mt-10 m-auto  text-2xl font-semibold border-2 border-gray-300 rounded-md shadow-md"
       >
         Clear Cart

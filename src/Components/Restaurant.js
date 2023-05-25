@@ -15,8 +15,8 @@ const Restaurant = () => {
 
   return (
     <>
-      <div className="flex justify-around p-20 ">
-        <div className=" w-[450px] max-w-max border-2 border-gray-100 p-3 rounded-lg shadow-lg">
+      <div className="flex justify-around p-20  ">
+        <div className=" w-[450px] max-w-max bg-gray-200  p-3 rounded-lg shadow-lg">
           <img
             className="w-[450px] rounded shadow-md mb-5"
             src={
